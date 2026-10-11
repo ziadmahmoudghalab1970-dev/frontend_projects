@@ -1,6 +1,5 @@
-html {
-    scroll-behavior: smooth;
-}
+@import url("http://fonts.cdnfonts.com/css/sansation");
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap");
 
 * {
     margin: 0;
@@ -8,306 +7,120 @@ html {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: "Source Sans Pro", sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-    background: var(--bg-color);
+.contact-container {
+    background-image: url(images/bg.svg);
+    background-size: cover;
+    height: 100vh;
 }
 
-[data-theme="light"] {
-    --bg-color: #fff;
-    --primary-bg: #8c43ff;
-    --color: #333;
-    --togglebg: #d4e7d5;
-    --toggleslider: #fff;
-    --roundcolor: #fff;
-    --svgcolor: #111;
-}
-
-[data-theme="dark"] {
-    --bg-color: #333333;
-    --primary-bg: #333;
-    --bg-color: #333333;
-    --color: #e9dcdc;
-    --togglebg: #333;
-    --toggleslider: #e9dcdc;
-    --roundcolor: #333;
-    --svgcolor: #fff;
-}
-
-.nav {
-    height: 5rem;
-    width: 100%;
-    display: block;
-    justify-content: flex-start;
-    z-index: 10;
-    font-weight: 300;
-    /* transition: 0.2s ease-in-out; */
-    /* transition: transform 400ms ease-in-out; */
-    position: fixed;
-}
-
-.nav__list {
-    /* list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  margin-left: 55vh;
-  margin-top: -49px;
-  padding: 0vh 4vw; */
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    /* margin-left: 55vh; */
-    margin-top: -49px;
-    /* margin: auto; */
-    padding: 0vh 4vw;
-}
-
-.nav__link {
-    color: inherit;
-    text-decoration: none;
-    margin-right: 50px;
-    position: relative;
-    font-family: "Raleway", sans-serif;
-    padding: 16px 0;
-    margin: 0 12px;
-    letter-spacing: 1px;
-    line-height: 16px;
-    font-weight: 700;
-    transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
-    color: #111;
-}
-
-.nav-toggle {
-    display: none;
-}
-
-.nav__link::before {
-    content: "";
-    display: block;
+.right {
     position: absolute;
-    bottom: 3px;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: #000;
-    transform-origin: right top;
-    transform: scale(0, 1);
-    transition: color 0.1s, transform 0.2s ease-out;
+    width: 360px;
+    left: 60%;
+    height: 580px;
+    top: calc(50% - 580px / 2);
+    background: #ffffff;
+    border-radius: 25px;
+    text-align: center;
 }
 
-.nav__link:active::before {
-    background-color: #000;
-}
-
-.nav__link:hover::before,
-.nav__link:focus::before {
-    transform-origin: left top;
-    transform: scale(1, 1);
+.title {
+    font-family: Sansation;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 145px;
+    align-items: center;
+    font-family: "Sansation", sans-serif;
+    color: #5754dd;
 }
 
 .logo {
-    padding: 3vh 5vw;
+    width: 120px;
+    height: 120px;
+    margin-top: -40px;
+}
+
+input[type="email"],
+input[type="password"] {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 20px;
+    color: #85b6ff;
+    padding: 20px 10px 20px 5px;
+    border: 2px solid #568aee;
+    width: 280px;
+    height: 45px;
+    margin: 15px;
+    border-radius: 25px;
+    box-sizing: border-box;
     text-align: center;
-    display: flex;
-    align-items: center;
-    color: rgb(22, 8, 8);
-    text-transform: uppercase;
-    width: 25rem;
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    /* margin-top: 7px;*/
+    overflow: hidden;
+    font-family: "Scheherazade New", serif;
 }
 
-.smalllogo {
-    display: none;
+input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    font-weight: bold;
+    height: 18px;
+    width: 18px;
 }
 
-a {
+::placeholder {
+    color: #85b6ff;
+    font-size: 18px;
+}
+
+.icon {
+    position: absolute;
+    padding: 24px 32px;
+    height: 75px;
+    width: 90px;
+}
+
+.keepme {
+    margin: 15px;
+    color: #71a1bd;
+    font-family: "Scheherazade New", serif;
+    font-weight: bold;
+}
+
+button {
+    width: 260px;
+    height: 45px;
+    left: 1273px;
+    top: 780px;
+    font-family: "Sansation", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    background: rgba(135, 113, 224, 0.89);
+    border-radius: 25px;
+}
+
+.link {
+    text-align: center;
+    display: block;
+    margin: 18px;
+    color: #71a1bd;
+    font-family: "Scheherazade New", serif;
+    font-weight: bold;
     text-decoration: none;
-    color: #111;
 }
 
-@media (max-width: 800px) {
-    .nav {
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        transform: translateX(100%);
-        transition: transform 400ms cubic-bezier(0.51, 0.6, 0.54, 0.59);
-        height: 100vh;
+@media only screen and (max-width: 700px) {
+    .contact-container {
+        background: linear-gradient(138.56deg, #318adc 23.44%, #88183a 89.5%);
     }
 
-    .nav__list {
-        list-style: none;
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-evenly;
-        text-align: center;
-        margin: 0;
-        padding: 135px;
-        background-color: #111;
-        width: 100%;
+    .right {
+        left: calc(68% - 500px / 2);
     }
-
-    .logo {
-        display: none;
-    }
-
-    .smalllogo {
-        padding: 4.7vh 8vw;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        color: #111;
-        text-transform: uppercase;
-        font-family: "Raleway", sans-serif;
-        font-weight: 800;
-    }
-
-    .logolink {
-        text-decoration: none;
-        color: #111;
-    }
-
-    .nav-toggle {
-        display: block;
-        padding: 2.3em;
-        background: transparent;
-        border: 0;
-        cursor: pointer;
-        position: absolute;
-        right: 0.5rem;
-        top: 1.1rem;
-        /* left: 29rem; */
-        z-index: 1000;
-        outline: none;
-    }
-
-    .nav__link {
-        margin: 0;
-        color: #fff;
-    }
-
-    .nav-open {
-        overflow: hidden;
-    }
-
-        .nav-open .nav {
-            transform: translateX(0);
-            width: 100vw;
-        }
-
-        .nav-open .logo {
-            display: none;
-        }
-
-        .nav-open .hamburger {
-            transform: rotate(0.625turn);
-            background-color: #fff;
-        }
-
-            .nav-open .hamburger::before {
-                transform: rotate(90deg) translateX(-6px);
-                background-color: #fff;
-            }
-
-            .nav-open .hamburger::after {
-                opacity: 0;
-            }
-
-    .hamburger {
-        display: block;
-        position: relative;
-    }
-
-        .hamburger,
-        .hamburger::before,
-        .hamburger::after {
-            background-color: #111;
-            width: 2em;
-            height: 3px;
-            border-radius: 1em;
-            transition: transform 250ms ease-in-out;
-        }
-
-            .hamburger::before,
-            .hamburger::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-            }
-
-            .hamburger::before {
-                top: 6px;
-            }
-
-            .hamburger::after {
-                bottom: 6px;
-            }
-
-    .nav__item {
-        color: #fff;
-    }
-
-    .nav__link::before {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: 3px;
-        left: 0;
-        height: 3px;
-        width: 100%;
-        background-color: #fff;
-        transform-origin: right top;
-        transform: scale(0, 1);
-        transition: color 0.1s, transform 0.2s ease-out;
-    }
-
-    .nav__link:active::before {
-        background-color: #fff;
-    }
-
-    .nav__link:hover::before,
-    .nav__link:focus::before {
-        transform-origin: left top;
-        transform: scale(1, 1);
-    }
-}
-
-section {
-    width: 100%;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    min-height: 110vh;
-}
-
-.one {
-    background-color: #fff;
-}
-
-.two {
-    background-color: rgb(190, 183, 170);
-}
-
-.three {
-    background-color: rgb(63, 118, 238);
-}
-
-.four {
-    background-color: rgb(221, 22, 88);
-}
-
-.five {
-    background-color: rgb(163, 114, 8);
 }
