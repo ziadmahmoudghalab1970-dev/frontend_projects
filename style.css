@@ -1,126 +1,95 @@
-@import url("http://fonts.cdnfonts.com/css/sansation");
-@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap");
-
 * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background: rgb(25, 93, 106);
+    background: radial-gradient( circle, rgba(25, 93, 106, 1) 38%, rgba(35, 35, 62, 1) 91% );
+    margin-top: 4%;
 }
 
-.contact-container {
-    background-image: url(images/bg.svg);
-    background-size: cover;
-    height: 100vh;
-}
-
-.right {
-    position: absolute;
-    width: 360px;
-    left: 60%;
-    height: 580px;
-    top: calc(50% - 580px / 2);
-    background: #ffffff;
-    border-radius: 25px;
-    text-align: center;
-}
-
-.title {
-    font-family: Sansation;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 145px;
-    align-items: center;
-    font-family: "Sansation", sans-serif;
-    color: #5754dd;
-}
-
-.logo {
-    width: 120px;
-    height: 120px;
-    margin-top: -40px;
-}
-
-input[type="email"],
-input[type="password"] {
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 20px;
-    color: #85b6ff;
-    padding: 20px 10px 20px 5px;
-    border: 2px solid #568aee;
-    width: 280px;
-    height: 45px;
-    margin: 15px;
-    border-radius: 25px;
-    box-sizing: border-box;
-    text-align: center;
-    overflow: hidden;
-    font-family: "Scheherazade New", serif;
-}
-
-input[type="checkbox"] {
+img {
     vertical-align: middle;
-    margin-right: 3px;
-    margin-bottom: 3px;
-    font-weight: bold;
-    height: 18px;
-    width: 18px;
 }
 
-::placeholder {
-    color: #85b6ff;
-    font-size: 18px;
+/* Slideshow container */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
 }
 
-.icon {
-    position: absolute;
-    padding: 24px 32px;
-    height: 75px;
-    width: 90px;
-}
-
-.keepme {
-    margin: 15px;
-    color: #71a1bd;
-    font-family: "Scheherazade New", serif;
-    font-weight: bold;
-}
-
-button {
-    width: 260px;
-    height: 45px;
-    left: 1273px;
-    top: 780px;
-    font-family: "Sansation", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 28px;
-    cursor: pointer;
-    color: #ffffff;
-    border: none;
-    background: rgba(135, 113, 224, 0.89);
-    border-radius: 25px;
-}
-
-.link {
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    background: linear-gradient(270deg, rgb(33 59 119) 0%, rgb(28 102 44) 100%);
+    max-width: inherit;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: relative;
+    bottom: 8px;
+    width: 100%;
     text-align: center;
-    display: block;
-    margin: 18px;
-    color: #71a1bd;
-    font-family: "Scheherazade New", serif;
-    font-weight: bold;
-    text-decoration: none;
 }
 
-@media only screen and (max-width: 700px) {
-    .contact-container {
-        background: linear-gradient(138.56deg, #318adc 23.44%, #88183a 89.5%);
+/* Number text (1/3 etc) */
+.numbertext {
+    background: linear-gradient(270deg, rgb(33 59 119) 0%, rgb(28 102 44) 100%);
+    max-width: max-content;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    border: 1px solid #ccc;
+    background-color: #4f7d8b5e;
+    width: auto;
+    margin-left: -100px;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    margin-right: -100px;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .right {
-        left: calc(68% - 500px / 2);
+.tilt-in-top-1 {
+    animation: tilt-in-top-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes tilt-in-top-1 {
+    0% {
+        transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateY(0deg) translateY(0) skewY(0deg);
+        opacity: 1;
     }
 }

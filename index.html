@@ -2,36 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login form</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="contact-container">
-        <div class="right">
-            <h1 class="title">Sign Into Account</h1>
-            <img class="logo" src="password lock.svg" alt="">
-            <div class="form-container">
-                <div class="username">
-                    <img class="icon email-icon" src="email.svg" alt="">
-                    <input type="email" class="user-input" placeholder="E-Mail">
-                </div>
-                <div class="password">
-                    <img class="icon password-icon" src="password lock.svg" alt="">
-                    <input type="password" class="pass-input" placeholder="Password">
-                </div>
-                <div class="keepme">
-                    <input type="checkbox" checked="true">
-                    Keep Me Logged In
-                </div>
-                <button type="submit">Go !</button>
-                <a href="#" class="link">Forgot Password</a>
-            </div>
+    <div class="slideshow-container">
+        <div class="mySlides tilt-in-top-1">
+            <div class="numbertext">1 / 3</div>
+            <img src="1.jpg" style="width: 100%;" />
+            <div class="text">Caption Text</div>
         </div>
+
+        <div class="mySlides tilt-in-top-1">
+            <div class="numbertext">2 / 3</div>
+            <img src="2.jpg" style="width: 100%;" />
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides tilt-in-top-1">
+            <div class="numbertext">3 / 3</div>
+            <img src="3.jpg" style="width: 100%;" />
+            <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
