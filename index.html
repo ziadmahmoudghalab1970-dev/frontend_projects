@@ -5,47 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="card">
-        <!-- 1 -->
-        <div class="picture">
-            <img class="img-fluid" src="zezo.png" width="250" height="250">
-        </div>
-        <!-- 2 -->
-        <div class="main-content">
-            <h3 class="name">ziad mahmoud</h3>
-            <span><i class="fab fa-instagram"></i> codingsumit</span>
-            <h4 class="title">Frontend developer 👨‍💻</h4>
-        </div>
-        <!-- 3 -->
-        <ul class="social">
-            <li><a href="#" class="fa fa-github"></a></li>
-            <li><a href="#" class="fa fa-twitter"></a></li>
-            <li><a href="#" class="fa fa-instagram"></a></li>
-            <li><a href="#" class="fa fa-telegram"></a></li>
-        </ul>
-        <!-- 4 -->
-        <div class="skills">
-            <h6>Skills</h6>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>SASS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Github</li>
-                <li>Git</li>
-                <li>VS code</li>
-            </ul>
-        </div>
-    </div>
 
+    <main>
+        <div class="container row">
+            <section class="ListContainer column">
+                <div id="people" class="Contact_list"></div>
+            </section>
+            <br>
+            <form autocomplete="off" class="js-form column">
+                <div class="name">
+                    <i class="far fa-user"></i>
+                    <input type="text" required id="fullName" placeholder="Enter name" />
+                </div>
+                <div class="email">
+                    <i class="fas fa-at"></i>
+                    <input type="email" required id="myEmail" placeholder="Enter email" />
+                </div>
+
+                <div class="number">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" required id="myTel" placeholder="Enter number" />
+                </div>
+
+                <div class="img">
+                    <i class="far fa-image"></i>
+                    <input type="url" required id="imgurl" placeholder="Enter image url" />
+                </div>
+                <button type="submit" class="submitbtn"></button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+        const toggleSwitch = document.querySelector(
+        '.theme-switch input[type="checkbox"]'
+        );
+        const currentTheme = localStorage.getItem("theme");
+
+        if (currentTheme) {
+        document.documentElement.setAttribute("data-theme", currentTheme);
+
+        if (currentTheme === "dark") {
+        toggleSwitch.checked = true;
+        }
+        }
+
+        function switchTheme(e) {
+        if (e.target.checked) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+        } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+        }
+        }
+
+        toggleSwitch.addEventListener("change", switchTheme, false);
+    </script>
 </body>
 
 </html>
